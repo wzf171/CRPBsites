@@ -15,7 +15,7 @@ Sklearn<br>
 
 Usage
 ===
-**1.** Configure the hyper-parameters (e.g. BATCH_SIZE, EPOCHS, ENCODER_UNITS and DECODER_UNITS, etc.), the name of RBP binding site data set (e.g. "LIN28B") and the TIME_STEP of input sequence length. Only the default values of the hyperparameters are provided in the program. If you need to migrate to a custom dataset, the parameters need to be adjusted according to the size of the data.<br><br>
+**1.** Configure the hyper-parameters (e.g. BATCH_SIZE, EPOCHS, ENCODER_UNITS and DECODER_UNITS, etc.), the name of RBP binding site data set (e.g. "LIN28B") and the TIME_STEP of input sequence length. Only the default values of the hyperparameters are provided in the program. If you need to migrate to a custom dataset, the parameters need to be adjusted according to the size of the data, such as the EPOCHS on IGF2BP1 dataset can be set to 5 to obtain better results. <br><br>
 **2.** Run Word2vec, train the word2vec model and generate the word vectors of binding site sequence words. <br><br>
 **3.** Run CRPBsites, train the CRPBsites predictor using the training set and use the test set for independent testing. The code for dividing the training set and the test set is provided in the program. The final evaluation metric is written to the text format, it can be found in the Auc directory (e.g. "CRPBsites/Demo/Code/AUC.txt").<br><br>
 **4.** In addition, a full-length circRNA sequence can be scanned with a fixed length using a trained model to predict possible binding sites for a given RBP.<br>
